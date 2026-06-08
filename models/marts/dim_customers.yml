@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: one record per customer with basic profile and order history information
+    columns:
+      - name: customer_id
+        description: unique identifier for each customer
+      - name: first_name
+        description: customer's first name
+        tests:
+          - not_null
+      - name: last_name
+        description: customer's last name
+        tests:
+          - not_null
+      - name: first_order_date
+        description: date of the customer's first order
+      - name: most_recent_order_date
+        description: date of the customer's most recent order
+      - name: number_of_orders
+        description: total number of orders placed by the customer
